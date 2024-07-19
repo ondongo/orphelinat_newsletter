@@ -90,7 +90,7 @@ export default function JoinOurTeam() {
       setLoading(true);
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_HOST_URL}/api/sendmail`,
+        `${process.env.HOST_URL}/api/sendmail`,
         {
           method: "POST",
           headers: {
