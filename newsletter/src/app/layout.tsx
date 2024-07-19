@@ -12,7 +12,7 @@ import LargeWithLogoCentered from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.visiteauxorphelins.org/"),
+  metadataBase: new URL("https://orphelinat-newsletter.vercel.app/"),
   title: "Visite aux Orphelins",
   description:
     "Visite aux Orphelins est une association à but non lucratif dédiée à soutenir les orphelins et les personnes dans le besoin à travers diverses initiatives communautaires.",

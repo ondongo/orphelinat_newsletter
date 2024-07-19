@@ -84,25 +84,20 @@ export default function JoinOurTeam() {
   const [loading, setLoading] = useState<boolean>(false);
   const toast = useToast();
   const handleNewsletter = async (data: NewsletterType) => {
-   
-
     try {
       setLoading(true);
 
-      const response = await fetch(
-        `${process.env.HOST_URL}/api/sendmail`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: data.email,
-            name: data.name,
-            phone: data.phone,
-          }),
-        }
-      );
+      const response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/sendmail`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          name: data.name,
+          phone: data.phone,
+        }),
+      });
 
       if (response.ok) {
         toast({
