@@ -145,11 +145,13 @@ export default function JoinOurTeam() {
         columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, lg: 32 }}
         py={{ base: 10, sm: 20, lg: 32 }}
+      
       >
-        <Stack spacing={{ base: 10, md: 20 }}>
+        <Stack spacing={{ base: 10, md: 20 }}   zIndex={"20"}>
           <Heading
             lineHeight={1.1}
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
+          
           >
             Partagez Notre Vision{" "}
             <Text
@@ -161,7 +163,7 @@ export default function JoinOurTeam() {
             </Text>{" "}
             Transformez des Vies
           </Heading>
-          <Stack direction={"row"} spacing={4} align={"center"}>
+          <Stack direction={"row"} spacing={4} align={"center"}   zIndex={"20"}>
             <AvatarGroup>
               {avatars.map((avatar) => (
                 <Avatar
@@ -224,6 +226,7 @@ export default function JoinOurTeam() {
           p={{ base: 4, sm: 6, md: 8 }}
           spacing={{ base: 8 }}
           maxW={{ lg: "lg" }}
+          zIndex={"20"}
         >
           <Stack spacing={4}>
             <Heading
@@ -322,6 +325,7 @@ export default function JoinOurTeam() {
         top={-10}
         left={-10}
         style={{ filter: "blur(70px)" }}
+        zIndex={"1"}
       />
     </Box>
   );
