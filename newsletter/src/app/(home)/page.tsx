@@ -289,7 +289,7 @@ export default function JoinOurTeam() {
               <FormControl isInvalid={!!errors.phone}>
                 <Input
                   id="phone"
-                  placeholder="(+__) __-___-___"
+                  placeholder="Votre numéro de téléphone"
                   bg={"gray.100"}
                   border={0}
                   color={"gray.500"}

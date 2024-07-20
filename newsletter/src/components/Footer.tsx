@@ -10,8 +10,12 @@ import {
   Tag,
   Image,
   useColorModeValue,
+  HStack,
+  IconButton,
 } from "@chakra-ui/react";
+import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
+import { FaInstagram } from "react-icons/fa";
 
 const Logo = (props: any) => {
   return (
@@ -35,6 +39,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export default function LargeWithLogoCentered() {
   const currentYear = new Date().getFullYear();
+  const router = useRouter();
   return (
     <Box color={useColorModeValue("gray.700", "gray.200")}>
       <Box py={10}>
@@ -66,12 +71,28 @@ export default function LargeWithLogoCentered() {
             bgClip="text"
             fontWeight={600}
           >
-            Présentation de V-O
+            Télécharger la présentation de V-O
           </Text>
         </Box>
         <Text pt={2} fontSize={"sm"} textAlign={"center"}>
           © {currentYear} Gloire. Tous droits reservés
         </Text>
+
+        <Flex justifyContent={"center"} pt={2}>
+          <Image
+            src="/Instagram_icon.png"
+            rounded={"full"}
+            alt="Instagram"
+            boxSize="30px"
+            cursor="pointer"
+            _hover={{ transform: "scale(1.1)" }}
+            onClick={() =>
+              router.push(
+                "https://www.instagram.com/visite_aux_orphelins_?igsh=eWFoMzBxeDd4Z3I2&utm_source=qr"
+              )
+            }
+          />
+        </Flex>
       </Box>
     </Box>
   );
