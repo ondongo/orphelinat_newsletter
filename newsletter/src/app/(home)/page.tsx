@@ -24,6 +24,7 @@ import {
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { createUsers } from "@/services/userNewsletter";
 
 const avatars = [
   {
@@ -87,19 +88,23 @@ export default function JoinOurTeam() {
     try {
       setLoading(true);
 
-      const response = await fetch(`https://www.visiteauxorphelins.com/api/sendmail`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          name: data.name,
-          phone: data.phone,
-        }),
-      });
+      const response = await fetch(
+        `https://www.visiteauxorphelins.com/api/sendmail`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: data.email,
+            name: data.name,
+            phone: data.phone,
+          }),
+        }
+      );
 
       if (response.ok) {
+        await createUsers(data);
         toast({
           title: "Success!",
           description: "Votre demande a été envoyée avec succès.",
