@@ -127,7 +127,7 @@ export default function JoinOurTeam() {
         duration: 5000,
         isClosable: true,
       });
-      console.error("Erreur :", error);
+      console.error("Erreur : ", error);
     } finally {
       setLoading(false);
     }
