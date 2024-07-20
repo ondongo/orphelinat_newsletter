@@ -19,8 +19,8 @@ export default function Layout({
   return (
     <Html>
       <Head />
-      <Preview>Dydy&apos;s hair: {username}</Preview>
-      <Section style={{ margin: "0 auto"}}>
+      <Preview> Bonjour {username}, merci pour ton intérêt à notre association </Preview>
+      <Section style={{ margin: "0 auto" }}>
         <Container style={{ textAlign: "center" }}>
           <Text style={h1}>Visites aux orphelins</Text>
         </Container>
