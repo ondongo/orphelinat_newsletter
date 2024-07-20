@@ -87,7 +87,7 @@ export default function JoinOurTeam() {
     try {
       setLoading(true);
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/sendmail`, {
+      const response = await fetch(`https://www.visiteauxorphelins.com/api/sendmail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

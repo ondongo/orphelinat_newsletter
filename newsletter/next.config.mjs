@@ -4,7 +4,7 @@ const nextConfig = {
       return [
         {
           source: '/api/:path*',
-          destination: 'https://orphelinat-newsletter.vercel.app/api/:path*', // Proxy vers l'API
+          destination: 'https://www.visiteauxorphelins.com/api/:path*', // Proxy vers l'API
         },
       ];
     },
