@@ -88,7 +88,7 @@ export default function LargeWithLogoCentered() {
             _hover={{ transform: "scale(1.1)" }}
             onClick={() =>
               router.push(
-                "https://www.instagram.com/visite_aux_orphelins_?igsh=eWFoMzBxeDd4Z3I2&utm_source=qr"
+                "https://www.instagram.com/visite_aux_orphelins_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               )
             }
           />
