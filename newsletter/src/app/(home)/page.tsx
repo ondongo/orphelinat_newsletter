@@ -121,7 +121,7 @@ export default function JoinOurTeam() {
           duration: 5000,
           isClosable: true,
         });
-        console.error("Erreur : problème avec la réponse du serveur.");
+        console.error("Erreur : problème avec la réponse du serveur");
       }
     } catch (error) {
       toast({
